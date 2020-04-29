@@ -4,7 +4,7 @@ template <class clave>
 void insercion(vector_t<clave>& vClaves/*, int tamaño*/) {
     
     
-    for (int i = 0; i < vClaves.size(); i++) {
+    for (int i = 0; i < vClaves.size() - 1; i++) {
 
         int j = i - 1;
         clave dato = vClaves[i];
