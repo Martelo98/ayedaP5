@@ -1,4 +1,3 @@
-#include "../include/vector_t.hpp"
 #include "../include/contador.hpp"
 
 
@@ -30,3 +29,4 @@ void contador::disminuir() {
     numero_ = 0;
     
 }
+
