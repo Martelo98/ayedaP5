@@ -3,7 +3,7 @@
 #include <catch2/catch.hpp>
 
 #include "../include/vector_t.hpp"
-
+#include "../include/insercion.hpp"
 
 TEST_CASE(" Vector class test", "[vector_t]") {
     
@@ -37,3 +37,17 @@ TEST_CASE(" Vector class test", "[vector_t]") {
 
 }
 
+TEST_CASE("Insercion function test" "[insercion.hpp]") {
+
+    vector_t<int> v(5);
+    v[0] = 40;
+    v[1] = 20;
+    v[2] = 0;
+    v[3] = 30;
+    v[4] = 10;
+    SECTION ("Sorting test") {
+        insercion(v);
+        CHECK (v.size() == 5);
+        REQUIRE (v[0] == 0);
+    }
+}
