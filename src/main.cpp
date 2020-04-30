@@ -2,8 +2,8 @@
 #include "../include/vector_t.hpp"
 #include "../include/burbuja.hpp"
 #include "../include/dni.hpp"
-//#include "../include/heapSort.hpp"
-//#include "../include/insercion.hpp"
+#include "../include/heapSort.hpp"
+#include "../include/insercion.hpp"
 #include "../include/quickSort.hpp"
 #include "../include/shellSort.hpp"
 
@@ -38,9 +38,9 @@ void demostracion() {
         cout <<"\nMétodo de inserción" << endl;
         vClave.write(cout);
         
-        //insercion(vNuevo, size);
+        insercion(vClave, size);
         cout << "Vector ordenado\n";
-        vNuevo.write(cout);
+        vClave.write(cout);
         break;
     
     case 2:
@@ -57,7 +57,7 @@ void demostracion() {
 
         cout << "\nMétodo HeapSort" << endl;
         vClave.write(cout);
-        //heapSort(vClave, size);
+        heapSort(vClave, size);
         cout << "vector ordenado\n" << endl;
         vClave.write(cout);
         
@@ -91,7 +91,7 @@ void demostracion() {
 }
 
 void estadistica() {
-    
+
 }
 
 

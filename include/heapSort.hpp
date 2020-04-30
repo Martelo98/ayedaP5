@@ -8,15 +8,17 @@ void baja(int i, vector_t<clave>& vClave, int size) {
     while (2 * i <= size) {
         h1 = 2*i;
         h2 = h1 + 1;
+
         if (h1 == size) {
             h = h1;
         }
         else if (vClave[h1] > vClave[h2]) {
             h = h1;
-            else {
+        }
+        else {
                 h = h2;
             }
-        }
+        
         if (vClave[h] <= vClave[i]) { 
             break;
         }
@@ -29,14 +31,14 @@ void baja(int i, vector_t<clave>& vClave, int size) {
 template<class clave>
 void heapSort(vector_t<clave>& vClave, int size) {
 
-    for (int i = size / 2; i > 0; i--) {
+    for (int i = (size / 2) - 1; i >= 0; i--) {
         baja(i, vClave, size);
 
     }
 
-    for (int i = n; i > 1; i--) {
-        swap(vClave[1], vClave[i]);
-        baja(1, vClave, i-1);
+    for (int i = size - 1; i >= 0; i--) {
+        swap(vClave[0], vClave[i]);
+        baja(0, vClave, i-1);
     }
     
 }
