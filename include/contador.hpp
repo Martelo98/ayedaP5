@@ -11,7 +11,7 @@ class contador {
         contador();
         ~contador();
 
-        int getValor();
+        int getNumero();
         
         void resetear();
         void incrementar();

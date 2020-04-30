@@ -9,7 +9,7 @@ contador::~contador() {
 
 }
 
-int contador::getValor() {
+int contador::getNumero() {
     
     return numero_;
 }

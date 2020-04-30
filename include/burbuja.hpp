@@ -1,11 +1,11 @@
 #include "vector_t.hpp"
 
 template <class clave>
-void burbuja(vector_t<clave>& vClave) {
+void burbuja(vector_t<clave>& vClave, int size) {
     
-    int aux;
-    for (int i = 0; i < vClave.size() - 1; i++) {
-        for (int j = 0; j < vClave.size() - 1; j++) {
+    clave aux;
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - 1; j++) {
 
             if (vClave[j] > vClave[j+1]) {
                 aux = vClave[j];

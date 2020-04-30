@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cmath>
+#include "../include/contador.hpp"
 
 using namespace std;
+
 
 class dni {
 
@@ -27,12 +29,5 @@ class dni {
     bool operator< (dni& numnero);
     bool operator<= (dni& numero);
     
-    
-
-
-
-
-
-
-
+    static contador cuenta;
 };

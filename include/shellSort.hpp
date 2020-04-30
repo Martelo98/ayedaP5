@@ -14,21 +14,21 @@ bool esValido(float alfa) {
 
 
 template<class clave>
-void shellSort(vector_t<clave>& vClave, float alfa) {
+void shellSort(vector_t<clave>& vClave, float alfa, int size) {
 
-    if (esValido == false) {
+  /*  if (esValido == false) {
         cout << "\nERROR: Alfa no es un valor válido [0 < alfa < 1]" << endl;
-        return 0;
+        
     }   
 
+    */
     
-    int vSize = vClave.size();
-    int delta = vSize; 
+    int delta = size; 
     
     while (delta > 1) {
     
-        delta = (alfa * vSize) / 2;
-        deltaSort(delta, vClave, vSize);
+        delta = (alfa * size) / 2;
+        deltaSort(delta, vClave, size);
 
     }
 
@@ -38,11 +38,11 @@ void shellSort(vector_t<clave>& vClave, float alfa) {
 template<class clave>
 void deltaSort (int delta, vector_t<clave>& vClave, int n) {
     for (int i = delta; i < n; i++) {
-        int aux = vClave[i];
+        clave aux = vClave[i];
         int j = i;
         while((j >= delta) && (aux < vClave[j-delta])) {
-            vClave[j] = vClave[j-d];
-            j = j - d;
+            vClave[j] = vClave[j-delta];
+            j = j - delta;
 
         }
         vClave[j] = aux;

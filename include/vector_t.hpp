@@ -28,7 +28,7 @@ public:
 
     void insert_element(T data);
 
-  //  ostream& write(std::ostream& os) const;
+    ostream& write(std::ostream& os) const;
 
 
 private:
@@ -109,13 +109,13 @@ T& vector_t<T>::operator[](int pos) {
     return at(pos);
 }
 
-/*template<class T>
+template<class T>
 ostream& vector_t<T>::write(ostream& os) const {
     os << "[";
-    for (unsigned i = 0; i < sz_; i++) {
+    for (int i = 0; i < sz_; i++) {
         os << " " << v_[i];
     }
     os << " ]" << "\n";
     return os;
-} */
+} 
 
